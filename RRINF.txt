@@ -1,0 +1,10 @@
+Prompt O,I
+Lbl A
+Pause 
+randInt(O,I)→X
+If X≤O
+Then:Goto E
+Else:Disp "*CLICK*"
+Goto A
+Lbl E
+Disp "BANG"

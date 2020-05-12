@@ -1,0 +1,93 @@
+ClrHome
+Lbl O
+randInt(1,26)→X
+randInt(1,10)→Y
+randInt(2,26)→H
+randInt(2,10)→V
+If X=H
+Then:If Y=V
+Then:Goto O
+End
+End
+Lbl D
+If Y<1
+Then:1→Y
+End
+If X<1
+Then:1→X
+End
+If Y>10
+Then:10→Y
+End
+If X>26
+Then:26→X
+End
+randInt(1,22)→R
+If R<15
+Then:Goto G
+End
+If R=16
+Then:ClrHome
+Disp "YOU RUN OUT OF WATER"
+Goto E
+End
+If R=17
+Then:ClrHome
+Disp "YOU ARE BRANDED A HEATHEN"
+Goto E
+End
+If R=18
+Then:ClrHome
+Disp "YOU DIE"
+Goto E
+End
+If R=19
+Then:ClrHome
+Disp "YOU TRIP AND DIE"
+Goto E
+End
+If R=20
+Then:ClrHome
+Disp "THE BLACK DEATH STRIKES"
+Goto E
+End
+If R=21
+Then:ClrHome
+Disp "YOU ARE KILLED BY BANDITS"
+Goto E
+End
+Lbl G
+ClrHome
+Output(Y,X,"O")
+Output(V,H,"J")
+Lbl L
+getKey→A
+If A=24
+Then:X-1→X
+Goto Q
+End
+If A=25
+Then:Y-1→Y
+Goto Q
+End
+If A=26
+Then:X+1→X
+Goto Q
+End
+If A=34
+Then:Y+1→Y
+Goto Q
+End
+Goto L
+Lbl Q
+If X=H
+Then:If Y=V
+Then:ClrHome
+Disp "YOU WIN THE CRUSADE"
+Goto E
+End
+Goto D
+End
+Goto D
+End
+Lbl E

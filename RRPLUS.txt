@@ -1,0 +1,45 @@
+Disp "RRPLUS 3"
+Menu("MODE","CLASSIC",O,"INFINITY",I,"BONUS",Q,"CUSTOM",N)
+Lbl Q
+Menu("BONUS MODES","PRANK",V,"WASTE",W,"CHEAT",E,"AUTO",G)
+Lbl G
+Input G
+randInt(1,G)→C
+If C=1
+Then:Goto D
+C-1→C
+For(B,1,C)
+Disp "*CLICK*"
+End:Goto D
+Lbl O
+randInt(1,6)→C
+Goto S
+Lbl N
+Prompt J,I
+randInt(J,I)→C
+Goto S
+Lbl V
+2→C
+Goto S
+Lbl W
+randInt(36,75)→C
+Goto S
+Lbl E
+Input C
+Lbl S
+ClrHome
+If C=1
+Then:Goto D
+Else:C-1→C
+For(B,1,C)
+Disp "*CLICK*"
+Pause 
+End
+Goto D
+Lbl I
+prgmRRINF
+Lbl D
+Disp "BANG"
+randInt(1,20)→Z
+If Z=10
+prgmSECRET
